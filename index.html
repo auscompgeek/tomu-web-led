@@ -28,5 +28,8 @@
 		red.addEventListener("click", () => light.red());
 		both.addEventListener("click", () => light.both());
 	</script>
+
+	<p>On Linux, you will need a udev rule similar to this:</p>
+	<pre><code>ACTION=="add|change", SUBSYSTEM=="usb", ATTRS{idVendor}=="1209", ATTRS{idProduct}=="70b1", TAG+="uaccess"</code></pre>
 </body>
 </html>
